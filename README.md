@@ -18,6 +18,8 @@ Microservizio Docker per servire il file AASA richiesto da iOS Universal Links.
 - `IOS_BUNDLE_ID` (default: `com.busone.app`)
 - `IOS_PATHS` (default: `/*`) — lista separata da virgole (es. `/roma/*,/milano/*`)
 - `APP_SCHEME` (default: `busone`) — schema custom usato nel fallback web (`busone://...`)
+- `RATE_LIMIT_WINDOW_MS` (default: `60000`)
+- `RATE_LIMIT_MAX` (default: `120`) — limite globale richieste per IP nella finestra
 
 `appID` generato: `<APPLE_TEAM_ID>.<IOS_BUNDLE_ID>`
 
@@ -50,6 +52,14 @@ Serve esporre il dominio `link.busone.app` verso questo servizio e assicurarsi c
 - nessun redirect su quel path
 - `Content-Type: application/json`
 - TLS valido
+
+## Struttura fallback HTML
+
+Il template della pagina deep link è separato dal server in:
+
+- `src/pages/deepLinkPage.html`
+
+Il server in `src/server.js` si occupa solo di routing, configurazione e rate limiting globale.
 
 ## Integrazione app
 
