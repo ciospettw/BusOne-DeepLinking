@@ -1,0 +1,14 @@
+services:
+  deeplinking:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: busone-deeplinking
+    restart: unless-stopped
+    environment:
+      PORT: "7462"
+      APPLE_TEAM_ID: "HPQ583U5HP"
+      IOS_BUNDLE_ID: "com.busone.app"
+      IOS_PATHS: "/*"
+    ports:
+      - "7462:7462"

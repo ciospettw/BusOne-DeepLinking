@@ -1,0 +1,15 @@
+{
+  "name": "busone-deeplinking",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Deep linking association service for BusOne",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
