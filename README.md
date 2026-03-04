@@ -19,7 +19,7 @@ Microservizio Docker per servire il file AASA richiesto da iOS Universal Links.
 - `IOS_PATHS` (default: `/*`) — lista separata da virgole (es. `/roma/*,/milano/*`)
 - `APP_SCHEME` (default: `busone`) — schema custom usato nel fallback web (`busone://...`)
 - `RATE_LIMIT_WINDOW_MS` (default: `60000`)
-- `RATE_LIMIT_MAX` (default: `120`) — limite globale richieste per IP nella finestra
+- `RATE_LIMIT_MAX` (default: `20`) — limite globale richieste per IP nella finestra
 
 `appID` generato: `<APPLE_TEAM_ID>.<IOS_BUNDLE_ID>`
 

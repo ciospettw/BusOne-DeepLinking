@@ -11,7 +11,7 @@ const APPLE_TEAM_ID = (process.env.APPLE_TEAM_ID || 'HPQ583U5HP').trim();
 const IOS_BUNDLE_ID = (process.env.IOS_BUNDLE_ID || 'com.busone.app').trim();
 const APP_SCHEME = (process.env.APP_SCHEME || 'busone').trim();
 const RATE_LIMIT_WINDOW_MS = Number(process.env.RATE_LIMIT_WINDOW_MS || 60_000);
-const RATE_LIMIT_MAX = Number(process.env.RATE_LIMIT_MAX || 120);
+const RATE_LIMIT_MAX = Number(process.env.RATE_LIMIT_MAX || 20);
 const ALLOWED_PATHS = (process.env.IOS_PATHS || '/*')
   .split(',')
   .map((value) => value.trim())
